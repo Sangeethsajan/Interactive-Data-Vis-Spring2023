@@ -13,8 +13,21 @@ h1 {
 h3 {
   font-size: 2em;
   margin: 0.25em 0;
+  color: blue;
 }
 
 p {
   font-size: 1em;
+}
+
+.table{
+  border:1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
+}
+
+th, td{
+  border:1px solid black;
+  border-collapse: collapse;
+  padding: 10px;
 }
