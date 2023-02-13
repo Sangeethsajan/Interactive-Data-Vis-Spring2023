@@ -7,9 +7,20 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <h1>Hello World!</h1>
-  <h3>Tutorial Assignment: 1_3_intro_to_js </h3>
-  <!-- add any HTML you might need here, like a button or a div -->
+  <h1>Hello everyOne!</h1>
+  <h3>Tutorial Assignment 3 by Sangeeth Sajan Baby </h3>
+  <label for="fname">Enter your First Name:</label>
+  <input id="fname" name="fname" type="text"></input>
+  <br>
+  <label for="lname">Enter your Last Name:</label>
+  <input id="lname" name="lname" type="text"></input>
+  <br>
+  <button onclick="onSubmit()" type="submit"> Submit</button>
+
+  <p id="fillvalue" style="color:red">Please fill all values</p>
+  <h3 id="warning"style="color:blueviolet">For clicking, submit the above form correctly</h3>
+
+  <h3 id="metacounter" style="color:blueviolet" onclick="counterFunction()"><span id="name">You</span> clicked <span style="color: cadetblue;" id="counter">0</span> times here</h3>
   <script src="main.js"></script>
 </body>
 </html>
