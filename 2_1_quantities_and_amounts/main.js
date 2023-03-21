@@ -1,39 +1,82 @@
-
-/* CONSTANTS AND GLOBALS */
-// const width = ;
-// const height = ;
+const width = window.innerWidth * 0.8,
+height = window.innerHeight * 0.8,
+  margin = 100;
+//   radius = ;
 
 /* LOAD DATA */
-d3.csv('addresses.csv', d3.autoType)
+d3.csv("squirrelActivities.csv", d3.autoType)
   .then(data => {
-    console.log("data", data)
+    console.log(data)
 
-
-    
-    const table = d3.select("#container")
-      .append("table")
-      .attr("style","border: 1px solid black")
-      table.append("thead")
-      const tbody =table.append("tbody")
-        // .append("tr")
-        // .attr("class","row")
-      const row = tbody.selectAll("tr")
-        .data(data)
-        .join("tr")
-        .attr("class","student")
-        .attr("id",data=>data.last)
-      row.append("td")
-        .text(data => data.first)
-      row.append("td")
-        .text(data =>data.last)
-
-    console.log(table)
+    // append svg
+    const svg = d3.select("#container").append("svg")
+      .attr("width", width)
+      .attr("height", height)
 
     /* SCALES */
-    /** This is where you should define your scales from data to pixel space */
-    
+    const xScale = d3.scaleLinear()
+      .domain([0, Math.max(...data.map(d => d.count))]) 
+      .range([margin,width - margin]) 
+
+    const yScale = d3.scaleBand()
+    // .domain(d3.extent(data.map(d => d.count))) // how ever many activites there are
+    .domain(['running', 'chasing', 'climbing', 'eating', 'foraging'])
+    // .range([height, 0])
+    .range([height - margin, margin])
+    .paddingInner(.2)
 
     /* HTML ELEMENTS */
-    /** Select your container and append the visual elements to it */
 
-  })
+    // append rectangles 
+    svg.selectAll("rect.bar")
+    .data(data)
+    .join("rect")
+    .attr("class", "bar")
+    .attr("x", xScale(0))
+    .attr("y", d => yScale(d.activity))
+    .attr("width", d => xScale(d.count)-margin)
+    .attr("height", yScale.bandwidth())
+    .attr("fill", "#69b3a2")
+    .attr("text","Hello")
+    /* Axes */
+    const xAxis = d3.axisBottom(xScale)
+    console.log(xAxis) 
+    const yAxis = d3.axisLeft(yScale)
+
+    svg
+      .append("g")
+      .style("transform", `translate(0px, ${height - margin}px)`) 
+      .call(d3.axisBottom(xScale))
+    svg
+      .append("g")
+      .style("transform", `translate(${margin}px, 0px)`)
+      .call(yAxis)
+
+svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .style("font-size", "25px")
+        .attr("x", width/2)
+        .attr("y", height-30)
+        .text("Count")
+    
+svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "end")
+        .attr("dy", ".75em")
+        .attr("transform", "rotate(-90)")
+        .style("font-size", "25px")
+        .attr("y", 20)
+        .attr("x", -240)
+        .text("Activities");
+
+svg.append("text")
+        .attr("text-anchor", "middle")
+        .style("fill", "blue")
+        .style("font-size", "2em")
+        .attr("x", width/2)
+        .attr("y", 45 )
+        .text("Squirrel Activities")
+
+  });
+Footer
