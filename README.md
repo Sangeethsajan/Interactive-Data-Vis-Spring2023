@@ -18,7 +18,7 @@ For doing this project I have formulated three research questions.
 	2. Which is the most used means of transportation?
 	3. What is the peak time which people are using various means of transportation?
   
-This is obtained from this link. This is a part of the ACS survey. I’m selecting the data of 2021. From this dataset I’m using Labels(time frame and means of transportation) and States variables for the analysis. I believe since the means of transportation plays a major roles our day to day life, the project could give a great insight into the way everyone commute to work.
+This is obtained from this [link](https://data.census.gov/table?text=ACSDT1Y2021.B08532-2023-03-30T184759&d=ACS+1-Year+Estimates+Detailed+Tables&tid=ACSDT1Y2021.B08532). This is a part of the ACS survey. I’m selecting the data of 2021. From this dataset I’m using Labels(time frame and means of transportation) and States variables for the analysis. I believe since the means of transportation plays a major roles our day to day life, the project could give a great insight into the way everyone commute to work.
 
 <img width="1440" alt="Screenshot 2023-05-15 at 8 54 54 PM" src="https://github.com/Sangeethsajan/Interactive-Data-Vis-Spring2023/assets/31395590/fb7edc6e-0268-42e9-abf4-4f4b81ec7fd2">
 <img width="1439" alt="Screenshot 2023-05-15 at 8 57 48 PM" src="https://github.com/Sangeethsajan/Interactive-Data-Vis-Spring2023/assets/31395590/443ee755-1713-4fcc-89e6-720f87816f38">
