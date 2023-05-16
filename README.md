@@ -24,7 +24,7 @@ This is obtained from this link. This is a part of the ACS survey. I’m selecti
 <img width="1439" alt="Screenshot 2023-05-15 at 8 57 48 PM" src="https://github.com/Sangeethsajan/Interactive-Data-Vis-Spring2023/assets/31395590/443ee755-1713-4fcc-89e6-720f87816f38">
 
 ## About the Data
-I considered two dataset for implementation of the project, the MEANS OF TRANSPORTATION TO WORK BY TIME ARRIVING AT WORK FOR WORKPLACE GEOGRAPHY and HISPANIC OR LATINO, AND NOT HISPANIC OR LATINO BY RACE datasets from the data.census.gov website The first one have hour wise data of the means of transportaion for work by people in the different geographies and the second dataset contains state wise data of the people in different race.
+I considered two dataset for implementation of the project, the [MEANS OF TRANSPORTATION TO WORK BY TIME ARRIVING AT WORK FOR WORKPLACE GEOGRAPHY](https://data.census.gov/table?text=ACSDT1Y2021.B08532-2023-03-30T184759&d=ACS+1-Year+Estimates+Detailed+Tables&tid=ACSDT1Y2021.B08532) and HISPANIC OR LATINO, AND NOT HISPANIC OR LATINO BY RACE datasets from the data.census.gov website The first one have hour wise data of the means of transportaion for work by people in the different geographies and the second dataset contains state wise data of the people in different race.
 
 Since the Means of Transportation dataset is much more interesting as it have the time wise data of various means of transportaion in different geographies, I'm selecting this dataset for the implementation of the project. Through this project I am trying to visualize
 
@@ -32,7 +32,7 @@ Since the Means of Transportation dataset is much more interesting as it have th
 2. The Time ~ Mode of Transporation data,
 3. The Geography(State) ~ Mode of Transporation data
 
-For the implementation, the page will contain graphs, which shows the Count and Mode of transportation in different axes and there will be a sliding control for controling the time. As we move the sliding controller, The graph will show the count of the mode of transportation at different time. The same will be replicated for the Geography also.
+For the implementation, the page will contain graphs, which shows the Count and Mode of transportation in different axes and there will be a dropdown control for controling the time. As we change the dropdown menu, The graph will show the count of the mode of transportation at different time. The same will be replicated for the Geography also.
 
 ## Sketches
 ![20230418_140058](https://github.com/Sangeethsajan/Interactive-Data-Vis-Spring2023/assets/31395590/0384e54b-c7fe-4bfd-accf-c5607ebc36c8)
